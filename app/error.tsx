@@ -7,7 +7,7 @@ interface NotesErrorProps {
   reset: () => void;
 }
 
-export default function NotesError({ error, reset }: NotesErrorProps) {
+function NotesError({ error, reset }: NotesErrorProps) {
   useEffect(() => {
     console.error(error);
   }, [error]);
@@ -16,7 +16,9 @@ export default function NotesError({ error, reset }: NotesErrorProps) {
     <div>
       <h2>Something went wrong!</h2>
       <p>Could not fetch the list of notes. {error.message}</p>
-      <button onClick={() => reset()}>Try again</button>
+      <button onClick={reset}>Try again</button>
     </div>
   );
 }
+
+export default NotesError;

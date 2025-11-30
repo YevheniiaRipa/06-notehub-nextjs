@@ -10,9 +10,7 @@ type NoteDetailsPageProps = {
   params: Promise<{ id: string }>;
 };
 
-export default async function NoteDetailsPage({
-  params,
-}: NoteDetailsPageProps) {
+async function NoteDetailsPage({ params }: NoteDetailsPageProps) {
   const { id } = await params;
 
   const queryClient = new QueryClient();
@@ -28,3 +26,5 @@ export default async function NoteDetailsPage({
     </HydrationBoundary>
   );
 }
+
+export default NoteDetailsPage;
