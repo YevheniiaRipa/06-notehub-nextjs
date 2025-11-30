@@ -1,5 +1,7 @@
-import ReactPaginate from "react-paginate";
-import css from "./Pagination.module.css";
+'use client';
+
+import ReactPaginate from 'react-paginate';
+import css from './Pagination.module.css';
 
 interface PaginationProps {
   pageCount: number;
@@ -29,9 +31,9 @@ function Pagination({ pageCount, onPageChange, currentPage }: PaginationProps) {
       breakClassName={css.breakItem}
       pageRangeDisplayed={3}
       marginPagesDisplayed={1}
-      breakLabel={"..."}
-      nextLabel={">"}
-      previousLabel={"<"}
+      breakLabel={'...'}
+      nextLabel={'>'}
+      previousLabel={'<'}
     />
   );
 }
